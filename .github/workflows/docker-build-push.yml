@@ -27,8 +27,8 @@ jobs:
           context: .
           file: infra/docker/Dockerfile.base
           push: true
-          tags: hudamawood/rag-base:latest,hudamawood/rag-base:${{ github.sha }}
-          cache-from: type=registry,ref=hudamawood/rag-base:latest
+          tags: mennatallahmedhat/rag-base:latest,mennatallahmedhat/rag-base:${{ github.sha }}
+          cache-from: type=registry,ref=mennatallahmedhat/rag-base:latest
           cache-to: type=inline
 
       - name: Build and Push Monolith Image
@@ -37,8 +37,8 @@ jobs:
           context: .
           file: infra/docker/Dockerfile.monolith
           push: true
-          tags: hudamawood/rag-monolith:latest,hudamawood/rag-monolith:${{ github.sha }}
-          cache-from: type=registry,ref=hudamawood/rag-monolith:latest
+          tags: mennatallahmedhat/rag-monolith:latest,mennatallahmedhat/rag-monolith:${{ github.sha }}
+          cache-from: type=registry,ref=mennatallahmedhat/rag-monolith:latest
           cache-to: type=inline
 
       - name: Build and Push Worker Image
@@ -47,8 +47,8 @@ jobs:
           context: .
           file: infra/docker/Dockerfile.worker
           push: true
-          tags: hudamawood/rag-worker:latest,hudamawood/rag-worker:${{ github.sha }}
-          cache-from: type=registry,ref=hudamawood/rag-worker:latest
+          tags: mennatallahmedhat/rag-worker:latest,mennatallahmedhat/rag-worker:${{ github.sha }}
+          cache-from: type=registry,ref=mennatallahmedhat/rag-worker:latest
           cache-to: type=inline
 
       - name: Build and Push Evaluation Image
@@ -57,8 +57,8 @@ jobs:
           context: .
           file: infra/docker/Dockerfile.evaluation
           push: true
-          tags: hudamawood/rag-evaluation:latest,hudamawood/rag-evaluation:${{ github.sha }}
-          cache-from: type=registry,ref=hudamawood/rag-evaluation:latest
+          tags: mennatallahmedhat/rag-evaluation:latest,mennatallahmedhat/rag-evaluation:${{ github.sha }}
+          cache-from: type=registry,ref=mennatallahmedhat/rag-evaluation:latest
           cache-to: type=inline
 
       - name: Build and Push UI Image
@@ -67,6 +67,6 @@ jobs:
           context: .
           file: infra/docker/Dockerfile.rag-ui
           push: true
-          tags: hudamawood/rag-ui:latest,hudamawood/rag-ui:${{ github.sha }}
-          cache-from: type=registry,ref=hudamawood/rag-ui:latest
+          tags: mennatallahmedhat/rag-ui:latest,mennatallahmedhat/rag-ui:${{ github.sha }}
+          cache-from: type=registry,ref=mennatallahmedhat/rag-ui:latest
           cache-to: type=inline
